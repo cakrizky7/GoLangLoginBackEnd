@@ -109,7 +109,31 @@ Response :
     {
         "data"       :   "user",
     }
+</pre><br>
+<b>POST => 0.0.0.0:9000/logincheck</b><br>
+To manualy check JWT token validity<br>
+<pre style="background-color:lightblue;">
+    'Authorization': 'Bearer ' + token
 </pre>
+for example (AJAX):
+<pre style="background-color:lightblue;">
+$.ajax({
+    url:'http://<server-ip/domain>:9000/logincheck',
+    type:'GET',
+    headers: {
+        'Authorization': 'Bearer ' + token
+    },
+    success: function(data){
+        console.log(data)
+    }
+}) 
+</pre>
+Response :
+<pre style="background-color:lightgreen;">
+    {
+        "data"       :   "user",
+    }
+</pre><br>
 
 =============================================================
 
